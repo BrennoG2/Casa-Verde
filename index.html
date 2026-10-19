@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Alimentação Ideal</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@650;900&family=Playfair+Display+SC&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
 </head>
 <body>
     <div class="wrapper-center">
@@ -24,16 +28,21 @@
             <li><a href="https://www.linkedin.com/in/brenno-gonçalves-jeronimo-a0a7b1311">DEV→</a></li>
         </ul>
     </nav>
+    <header class="hero">
+        <h1>Alimentação Ideal</h1>
+        <p>Refeições equilibradas para cada momento do seu dia.</p>
+        <a href="#comidas" class="btn-hero">Ver refeições</a>
+    </header>
     <section class="grid-section comidas" id="comidas">
         <h1 class="titulo">A Grade das Refeições</h1>
         <ul class="comidas-diversas">
-        <li><img src="img/Café_da_Manhã.jpg" alt=""></li>
-        <li><img src="img/Almoço.jpg" alt=""></li>
-        <li><img src="img/Almoço_Dieta.jpg" alt=""></li>
-        <li><img src="img/Café_tarde.jpg" alt=""></li>
-        <li><img src="img/Janta_Oriental.jpg" alt=""></li>
-        <li><img src="img/Janta_Dieta.jpg" alt=""></li>
-        <li><img src="img/Sobremesa.jpg" alt=""></li>
+        <li><img src="img/Café_da_Manhã.jpg" alt="" loading="lazy"></li>
+        <li><img src="img/Almoço.jpg" alt="" loading="lazy"></li>
+        <li><img src="img/Almoço_Dieta.jpg" alt="" loading="lazy"></li>
+        <li><img src="img/Café_tarde.jpg" alt="" loading="lazy"></li>
+        <li><img src="img/Janta_Oriental.jpg" alt="" loading="lazy"></li>
+        <li><img src="img/Janta_Dieta.jpg" alt="" loading="lazy"></li>
+        <li><img src="img/Sobremesa.jpg" alt="" loading="lazy"></li>
     </ul>
         <div class="description">
             <section>
@@ -104,16 +113,16 @@
     </section>
     <section class="grid-section contato" id="contato">
         <h1 class="titulo">Contato</h1>
-        <div class="mapa">
-            <img src="img/Local.jpg" alt="https://share.gemini.google/DAcGobB7LhnW">
-            <iframe src="https://maps.google.com/maps?q=R.+Santo+El%C3%ADas,+81+-+Divino,+Duque+de+Caxias+-+RJ&t=&z=15&ie=UTF8&iwloc=&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-        <ul class="dados">
+        <div class="local">
+            <img src="img/Local.jpg" alt="Fachada do Local">
+            <ul class="dados">
             <li>casaverde@gmail.com</li>
             <li>+55 (21) 99999-9999</li>
             <li>R. Santo Elias, N° 81</li>
             <li>Duque de Caxias - RJ</li>
-        </ul>
+            </ul>
+        </div>
+        <iframe class="mapa" src="https://maps.google.com/maps?q=R.+Santo+El%C3%ADas,+81+-+Divino,+Duque+de+Caxias+-+RJ&t=&z=15&ie=UTF8&iwloc=&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
     <footer class="copy">
         <p>Todos os Direitos Reservados.</p>
