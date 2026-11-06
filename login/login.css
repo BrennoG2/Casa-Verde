@@ -1,0 +1,28 @@
+/* Login do site Alimentação Ideal */
+.login-overlay{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(24,24,24,.55)}
+.login-overlay[hidden]{display:none}
+.login-box{position:relative;width:100%;max-width:400px;max-height:92vh;overflow-y:auto;box-sizing:border-box;padding:26px;border-radius:16px;background:rgb(231,248,220);border-left:6px solid rgb(56,165,120);box-shadow:0 12px 36px rgba(0,0,0,.3);font-family:Arial,Helvetica,sans-serif;color:rgb(24,24,24)}
+.login-box h2{font-family:'Playfair Display SC',Georgia,serif;font-weight:normal;font-size:1.8rem;margin:0 28px 14px 0}
+.login-fechar{position:absolute;top:10px;right:12px;border:0;background:none;font-size:1.8rem;line-height:1;cursor:pointer;color:rgb(24,24,24)}
+.login-abas{display:flex;gap:4px;margin-bottom:6px;border-bottom:2px solid rgba(56,165,120,.35)}
+.login-aba{border:0;background:none;padding:10px 14px;font:inherit;font-weight:700;cursor:pointer;color:rgb(70,100,70);border-bottom:3px solid transparent;margin-bottom:-2px}
+.login-aba.ativa{color:rgb(24,24,24);border-bottom-color:rgb(56,165,120)}
+.login-box label{display:block;margin-top:14px;font-size:.9rem;font-weight:700}
+.login-box input[type=text],.login-box input[type=email],.login-box input[type=password],.login-box select{display:block;width:100%;box-sizing:border-box;margin-top:6px;padding:11px 12px;border:1px solid rgb(109,165,109);border-radius:8px;background:#fff;color:rgb(24,24,24);font:inherit;font-weight:400}
+.login-box input:focus-visible,.login-box select:focus-visible,.login-box button:focus-visible,.menu-entrar:focus-visible,.login-usuario button:focus-visible{outline:2px solid rgb(88,143,32);outline-offset:2px}
+.login-check{display:flex!important;gap:10px;align-items:flex-start;font-weight:400!important;font-size:.82rem!important;line-height:1.35}
+.login-check input{margin-top:3px}
+.login-dica{margin:8px 0 0;font-size:.82rem;color:rgb(70,100,70);line-height:1.35}
+.login-erro{min-height:1.3em;margin:12px 0 0;font-size:.88rem;font-weight:700;color:#b3261e}
+.login-botao{width:100%;margin-top:14px;padding:13px;border:0;border-radius:999px;background:rgb(56,165,120);color:#fff;font-family:'Inter',Arial,sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:.08em;cursor:pointer}
+.login-botao:disabled{opacity:.6;cursor:wait}
+.login-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.login-botao.login-perigo{background:#b3261e}
+.login-usuario{position:fixed;right:16px;bottom:16px;z-index:900;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 14px;border-radius:14px;background:rgb(109,165,109);box-shadow:0 6px 18px rgba(0,0,0,.25);font-family:Arial,Helvetica,sans-serif;font-weight:700;color:rgb(24,24,24)}
+.login-usuario[hidden]{display:none}
+.login-usuario button{padding:6px 12px;border:0;border-radius:999px;background:rgb(231,248,220);font:inherit;font-size:.85rem;cursor:pointer;color:rgb(24,24,24)}
+.login-usuario button.login-perigo{background:none;text-decoration:underline;color:rgb(24,24,24)}
+.menu li[hidden]{display:none}
+.menu-entrar{display:block;padding:10px;margin-right:15px;border:0;border-radius:12px;background:none;cursor:pointer;color:rgb(24,24,24);font-family:'Inter',system-ui,sans-serif;font-weight:900;text-transform:uppercase;font-size:.9rem;letter-spacing:.1em;transition:background-color .3s}
+.menu-entrar:hover{background-color:rgba(255,255,255,.3)}
+.login-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:1100;max-width:90vw;padding:12px 18px;border-radius:12px;background:rgb(24,24,24);color:#fff;font-family:Arial,Helvetica,sans-serif;font-size:.9rem}
