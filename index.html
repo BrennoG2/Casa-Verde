@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@650;900&family=Playfair+Display+SC&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="login/login.css">
 </head>
 <body>
     <div class="wrapper-center">
@@ -25,6 +26,7 @@
             <li><a href="#comidas">Refeições</a></li>
             <li><a href="#faq">FaQ</a></li>
             <li><a href="#contato">Contato</a></li>
+            <li><button type="button" class="menu-entrar" id="abrirLogin">Entrar</button></li>
             <li><a href="https://www.linkedin.com/in/brenno-gonçalves-jeronimo-a0a7b1311">DEV→</a></li>
         </ul>
     </nav>
@@ -163,6 +165,82 @@
     <footer class="copy">
         <p>Todos os Direitos Reservados.</p>
     </footer>
+    <div class="login-overlay" id="loginOverlay" hidden>
+        <div class="login-box" role="dialog" aria-modal="true" aria-labelledby="loginTitulo">
+            <button type="button" class="login-fechar" id="loginFechar" aria-label="Fechar">&times;</button>
+            <h2 id="loginTitulo">Bem-vindo</h2>
+            <div class="login-abas">
+                <button type="button" class="login-aba ativa" id="abaEntrar">Entrar</button>
+                <button type="button" class="login-aba" id="abaCriar">Criar conta</button>
+            </div>
+            <form id="loginForm" novalidate>
+
+                <div class="login-hp" aria-hidden="true">
+                    <label>Não preencha <input type="text" id="loginSite" tabindex="-1" autocomplete="off"></label>
+                </div>
+
+                <label id="loginNomeWrap" hidden>
+                    Nome
+                    <input type="text" id="loginNome" maxlength="80" autocomplete="name">
+                </label>
+
+                <label>E-mail
+                    <input type="email" id="loginEmail" maxlength="120" autocomplete="email">
+                </label>
+
+                <label>Senha
+                    <input type="password" id="loginSenha" maxlength="128" autocomplete="current-password">
+                </label>
+
+                <div id="loginExtras" hidden>
+                    <label>Confirmar senha
+                        <input type="password" id="loginSenha2" maxlength="128" autocomplete="new-password">
+                    </label>
+                    <p class="login-dica">Mínimo de 10 caracteres, com letras e números.</p>
+                    <label>Como pretende usar o site?
+                        <select id="loginInteresse">
+                            <option value="pessoal">Uso pessoal</option>
+                            <option value="equipe">Minha família ou equipe</option>
+                            <option value="empresa">Meu negócio</option>
+                        </select>
+                    </label>
+                    <label class="login-check">
+                        <input type="checkbox" id="loginConsent">
+                        <span>Concordo em armazenar meu nome, e-mail e senha (guardada de forma criptografada e irreversível), conforme a LGPD. Posso excluir tudo quando quiser.</span>
+                    </label>
+                </div>
+
+                <p class="login-erro" id="loginErro" role="alert"></p>
+                <button type="submit" class="login-botao" id="loginEnviar">Entrar</button>
+
+            </form>
+
+        </div>
+    </div>
+    <div class="login-usuario" id="loginUsuario" hidden>
+        <span id="loginSaudacao"></span>
+        <button type="button" id="loginSair">Sair</button>
+        <button type="button" id="loginExcluir" class="login-perigo">Excluir conta</button>
+    </div>
+    <div class="login-overlay" id="excluirOverlay" hidden>
+        <div class="login-box" role="dialog" aria-modal="true" aria-labelledby="excluirTitulo">
+            <button type="button" class="login-fechar" id="excluirFechar" aria-label="Fechar">&times;</button>
+            <h2 id="excluirTitulo">Excluir minha conta</h2>
+            <p class="login-dica">Apagamos seu nome, e-mail e senha de forma definitiva. Não dá para desfazer.</p>
+            <form id="excluirForm" novalidate>
+                <label>Digite sua senha
+                    <input type="password" id="excluirSenha" maxlength="128" autocomplete="current-password">
+                </label>
+                <label>Digite EXCLUIR para confirmar
+                    <input type="text" id="excluirConfirma" maxlength="10" autocomplete="off">
+                </label>
+                <p class="login-erro" id="excluirErro" role="alert"></p>
+                <button type="submit" class="login-botao login-perigo" id="excluirEnviar">Excluir conta e todos os dados</button>
+            </form>
+        </div>
+    </div>
     <script src="script.js"></script>
+    <script src="login/config.js"></script>
+    <script src="login/login.js"></script>
 </body>
 </html>
